@@ -28,6 +28,12 @@ mongoose.connect('mongodb://localhost:27017/journalApp', {
     console.log('Error connecting to MongoDB:', err);
 });
 
+// Import routes
+const authRoutes = require('./routes/authRoutes');  // Ensure the correct path to your routes file
+
+// Use routes
+app.use('/auth', authRoutes);  // all auth routes will be prefixed with /auth
+
 // Sample route to check if server is working
 app.get('/', (req, res) => {
     res.send('Welcome to the Journal App!');
@@ -39,3 +45,4 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
+
