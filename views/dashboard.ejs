@@ -29,6 +29,10 @@
                             <a href="/journal/view/<%= journal._id %>">
                                 <%= journal.title %>
                             </a>
+
+                            <!-- Edit Link -->
+                            <a href="/journal/edit/<%= journal._id %>" style="margin-left: 10px;">Edit</a>
+
                             <!-- Delete Form -->
                             <form action="/journal/delete/<%= journal._id %>" method="POST" style="display:inline;">
                                 <button type="submit" onclick="return confirm('Are you sure you want to delete this entry?')">Delete</button>
@@ -41,15 +45,18 @@
             <% } %>
 
             <h3>Create a New Journal Entry</h3>
-            <form action="/journal/create" method="POST">
+            <form action="/journal/create" method="POST" enctype="multipart/form-data">
                 <label for="title">Title:</label>
                 <input type="text" id="title" name="title" required>
-
+            
                 <label for="content">Content:</label>
                 <textarea id="content" name="content" rows="4" required></textarea>
-
+            
+                <label for="image">Upload Image (optional):</label>
+                <input type="file" id="image" name="image" accept="image/*">
+            
                 <button type="submit">Save Entry</button>
-            </form>
+            </form>            
         </section>
 
         <!-- Personalized Prompts Section -->
@@ -71,9 +78,10 @@
                                 "How are you feeling today, and what can you do to improve your mental health?"
                             <% } else if (interest === 'Creativity') { %>
                                 "What creative project are you currently working on, and how does it inspire you?"
-                            <% } else { %>
-                                "What are your thoughts on your interest in <%= interest %>?"
+                                <% } else { %>
+                                    "What are some things you think you can improve on when it comes to <%= interest %>?"
                             <% } %>
+
                         </li>
                     <% }); %>
                 </ul>
