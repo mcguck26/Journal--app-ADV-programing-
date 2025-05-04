@@ -10,6 +10,10 @@ const userSchema = new mongoose.Schema({
     password: {
         type: String,
         required: true
+    },
+    interests: {
+        type: [String],  // Array of strings
+        default: []
     }
 });
 
@@ -17,3 +21,4 @@ const userSchema = new mongoose.Schema({
 const User = mongoose.model('User', userSchema);
 
 module.exports = User;
+

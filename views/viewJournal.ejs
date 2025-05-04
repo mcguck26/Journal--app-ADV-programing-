@@ -1,13 +1,22 @@
-<!-- views/viewJournal.ejs -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= journal.title %></title>
+    <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-    <h1><%= journal.title %></h1>
-    <p><%= journal.content %></p>
-    <a href="/dashboard">Back to Dashboard</a>
+    <header>
+        <h1><%= journal.title %></h1>
+        <a href="/home">Back to Home</a>
+        <a href="/logout">Logout</a>
+    </header>
+
+    <main>
+        <section>
+            <p><%= journal.content %></p>
+        </section>
+    </main>
 </body>
 </html>

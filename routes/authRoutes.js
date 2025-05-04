@@ -3,18 +3,25 @@ const router = express.Router();
 const authController = require('../controllers/authControllers'); // Import the controller
 
 // Login routes
-router.get('/login', authController.renderLoginPage);  // Use controller to render the login page
-router.post('/login', authController.login);           // Use controller for login logic
+router.get('/login', authController.renderLoginPage);
+router.post('/login', authController.login);
 
 // Signup routes
-router.get('/signup', authController.renderSignupPage);  // Use controller to render the signup page
-router.post('/signup', authController.signup);           // Use controller for signup logic
+router.get('/signup', authController.renderSignupPage);
+router.post('/signup', authController.signup);
 
 // Logout route
-router.get('/logout', authController.logout);            // Use controller for logout logic
+router.get('/logout', authController.logout);
 
 // Dashboard route (protected)
-router.get('/dashboard', authController.dashboard);      // Use controller to render dashboard page
+router.get('/dashboard', authController.dashboard);
+
+// Home page: View all journal entries
+router.get('/home', authController.renderHomePage);
+
+// View a single journal entry by ID
+router.get('/journal/:id', authController.viewJournalEntry);
 
 module.exports = router;
+
 
