@@ -2,8 +2,9 @@
   "name": "journal--app-adv-programing-",
   "version": "1.0.0",
   "description": "web-based journal app with personalized prompts, user accounts, media support, and searchable entries.",
-  "main": "index.js",
+  "main": "server.js", 
   "scripts": {
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

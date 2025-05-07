@@ -1,7 +1,7 @@
 # Journal--app-ADV-programing-
 ## About
 
-This is a simple web application where users can register an account, log in, and create journal entries. Users can view their past entries after logging in.
+This is a simple web application where users can register an account, log in, and create journal entries. Users can view their past entries after logging in. Users can edit or delete entries as well as add an image if they would like.
 
 The app is still under development, but the basic features like authentication and posting journals are working.
 
@@ -27,11 +27,11 @@ The app is still under development, but the basic features like authentication a
 
 - Start the app:
 
-   npm start
+   npm start (if this does not work try node server.js)
 
 - Open your browser and go to:
 
-   http://localhost:3000
+   http://localhost:3000/login 
 
 ## Technologies
 
@@ -39,5 +39,6 @@ The app is still under development, but the basic features like authentication a
 - Express.js
 - MongoDB with Mongoose
 - EJS templates
+- GridFS for uploading images 
 - bcrypt for password hashing
 - express-session for session management
