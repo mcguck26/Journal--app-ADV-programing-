@@ -42,3 +42,5 @@ passport.use(new LocalStrategy(
 ));
 
 module.exports = passport;
+
+//Skylar completed this code 

@@ -38,7 +38,10 @@ The app is still under development, but the basic features like authentication a
 - Node.js
 - Express.js
 - MongoDB with Mongoose
+- MongoDB Compass
 - EJS templates
 - GridFS for uploading images 
 - bcrypt for password hashing
 - express-session for session management
+
+Everyone contributed to the READme.

@@ -8,4 +8,4 @@ function isAuthenticated(req, res, next) {
   
   module.exports = { isAuthenticated };
 
-  
+  //Lina did entire middleware 

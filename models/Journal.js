@@ -12,3 +12,5 @@ const journalSchema = new mongoose.Schema({
 const Journal = mongoose.model('Journal', journalSchema);
 
 module.exports = Journal;
+
+//Jenna and Skylar worked on this entire folder together 

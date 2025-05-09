@@ -8,20 +8,20 @@ const session = require('express-session');
 require('dotenv').config();
 const app = express();
 
-// Import routes
+// Import routes - Skylar worked on the routes folder 
 const authRoutes = require('./routes/authRoutes');  // Import the authRoutes file
 const journalRoutes = require('./routes/journalRoutes');  // Import the journalRoutes file
 
-// Middleware setup
+// Middleware setup - Lina Vargas 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Set up EJS as the view engine
+// Set up EJS as the view engine -  Jenna worked on this portion 
 app.set('view engine', 'ejs');  // Tells Express to use EJS for rendering views
 app.set('views', path.join(__dirname, 'views')); // Specify the views folder
 
-// Authentication setup
+// Authentication setup - Lina worked on this portion with Skylars help 
 app.use(session({ 
   secret: process.env.SESSION_SECRET,  // Use SESSION_SECRET from .env
   resave: false, 
@@ -32,7 +32,7 @@ require('./config/passport');  // Import the passport config
 app.use(passport.initialize());
 app.use(passport.session());
 
-// MongoDB setup using environment variable from .env
+// MongoDB setup using environment variable from .env -  Skylar 
 mongoose.connect(process.env.DB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,

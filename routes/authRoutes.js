@@ -25,3 +25,4 @@ router.get('/journal/:id', authController.viewJournalEntry);
 module.exports = router;
 
 
+//Routes folder was completed by Skylar 

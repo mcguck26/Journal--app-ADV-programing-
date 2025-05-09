@@ -108,7 +108,7 @@ exports.dashboard = async (req, res) => {
     }
 };
 
-// Home Route: Display all journal entries for the logged-in user
+// Home Route: Display all journal entries for the logged-in user - From here down Annie added any error handling 
 exports.renderHomePage = async (req, res) => {
     try {
         const user = await User.findById(req.session.userId);
@@ -157,3 +157,5 @@ exports.deleteJournal = async (req, res) => {
         res.status(500).send('Error deleting journal entry');
     }
 };
+
+//This was edited and updated continuously as we built our project by Skylar and Lina with Annie adding any error handling 
